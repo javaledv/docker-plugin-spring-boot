@@ -1,0 +1,12 @@
+  mongo:
+    image: mongo:3.2.4
+    ports:
+    - 27017:27017
+
+  app:
+    image: lesheniuk/testimage:latest
+    ports:
+    - 8080:8080
+    links:
+    - mongo
+
